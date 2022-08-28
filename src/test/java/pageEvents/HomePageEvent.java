@@ -28,7 +28,7 @@ public class HomePageEvent {
             homePageElements.buttonEspanol.click();
         }catch (Exception e){
 
-            System.out.println("No se encontro el PopUp");
+            System.out.println(HomePageConstant.popUpMessage);
         }
         homePageElements.comprarElement.click();
 

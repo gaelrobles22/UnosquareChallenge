@@ -20,6 +20,9 @@ public class NonFreeAppElements {
     @FindBy(xpath = "//span[text()='MXN$89.00']")
     public WebElement elementPriceComparison;
 
+    @FindBy(css = "div[aria-label='Get origin games manager and launcher in Store app']")
+    public WebElement shopProduct;
+
     public NonFreeAppElements(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }

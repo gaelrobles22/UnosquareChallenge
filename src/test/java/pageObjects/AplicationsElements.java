@@ -26,6 +26,8 @@ public class AplicationsElements {
     public WebElement assertText;
 
 
+
+
     public AplicationsElements(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }

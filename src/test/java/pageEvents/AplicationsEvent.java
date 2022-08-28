@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import pageObjects.AplicationsElements;
+import pageObjects.HomePageConstant;
 
 import static com.microsoft.unosquarechallenge.MainPageTest.driver;
 
@@ -32,7 +33,7 @@ public class AplicationsEvent {
         }
 
         //imprimimos el total de aplicaciones que existen en las tres paginas
-        System.out.println("El total de aplicaciones en las tres paginas es de---> " + acount);
+        System.out.println(HomePageConstant.totalApps + acount);
 
         //Hacemos una espera explicita para encontrar el elemento aplicaciones y nos aseguramos de volver a la pagina 1
         WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -42,12 +43,11 @@ public class AplicationsEvent {
         //Try catch para obtener y asegurarnos que estamos en la pagina 1 comparando el texto
         try {
             wait.until(ExpectedConditions.visibilityOf(aplications.assertText));
-            Assert.assertEquals(aplications.assertText.getText(), "Se muestran 1 - 90 de 732 resultados");
+            Assert.assertEquals(aplications.assertText.getText(), HomePageConstant.checkText);
         } catch (Exception e) {
-            System.out.println("No se encontro el elemento");
+            System.out.println(HomePageConstant.msgNotFound);
         }
-        System.out.println("////////////////////////////////////////////////////////////////////////////////////////");
-
+        System.out.println("<------------------------------------------------------------------------------------------>");
 
 
     }
