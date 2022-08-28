@@ -34,15 +34,6 @@ public class MainPageTest {
     private NonFreeAppEvent mainNonFree;
     private NonFreeAppElements mainNonFreeElement;
 
-    @BeforeTest
-    public void setUpReports() {
-//        htmlReporter = new ExtentHtmlReporter(new File(System.getProperty("use.dir")+"AutomationREports.html"));
-//        htmlReporter.loadXMLConfig(new File(System.getProperty("user.dir")+"/extent-config.xml"));
-//        reports = new ExtentReports();
-//        reports.setSystemInfo("Environment","QA");
-//        reports.attachReporter(htmlReporter);
-
-    }
 
 
     @BeforeMethod
